@@ -221,7 +221,7 @@ def num2bin(request):
         except ValueError:
             msg='Invalid input'
        
-    return render(request,'num2bin.html',{'d':b,'indata':inp,'o':o,'msg':msg})
+    return render(request,'num2bin.html',{'d':b,'indata':inp,'o':o[::-1],'msg':msg})
 
 @csrf_exempt
 def bin2num(request):
